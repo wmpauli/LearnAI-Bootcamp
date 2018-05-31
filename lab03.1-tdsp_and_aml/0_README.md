@@ -1,10 +1,10 @@
 # The Team Data Science Process using Azure Machine Learning
 
-This hands-on lab guides you through using the [Team Data Science Process](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/overview) using [Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/preview/overview-what-is-azure-ml) with Azure Machine Learning. We will be using a [Customer Churn Analysis example](https://docs.microsoft.com/en-us/azure/machine-learning/preview/scenario-churn-prediction) throughout this Workshop (which we will download in a lab below).
+This hands-on lab guides you through using the [Team Data Science Process](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/overview) (TDSP) using [Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/preview/overview-what-is-azure-ml) (AML). We will be using a [Customer Churn Analysis example](https://docs.microsoft.com/en-us/azure/machine-learning/preview/scenario-churn-prediction) throughout this Workshop (which we will download in a lab below).
 
 In this lab, you will:
 - [ ] Understand and use the TDSP to clearly define business goals and success criteria
-- [ ] Understand how to use a code-repository system with Azure Machine Learning using the TDSP structure
+- [ ] Understand how to use a code-repository system with AML using the TDSP structure
 - [ ] Create an example environment
 - [ ] Use the TDSP and AML for data acquisition and understanding
 - [ ] Use the TDSP and AML for creating an experiment with a model and evaluation of models
