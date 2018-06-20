@@ -26,9 +26,9 @@ Here is the high-level architecture of an end-to-end solution with AML, which ha
 
 The three main Azure resources we will consume in this lab are as follows:
 
- - An **Experimentation account** contains workspaces, which is where our projects are sitting. When working in teams, we can add multiple users or "seats" to an experimentation account. To use the AML and run experiments, we must create an experimentation account.
+ - An **Experimentation account** contains workspaces, which is where our projects are sitting. When working in teams, we can add multiple users or "seats" to an experimentation account. To use AML and run experiments, we must create an experimentation account.
  - A **Model Management account** is for managing models. Model management is essential to both model development and deployment. We use a model management account to register models and bundle models and code (including dependencies) into **manifests**. Manifests are in turn used to create Docker **images**, and those images in turn build containerized web services that run instances of our deployed application, locally or in the cloud.
- - An **Environment** denotes a particular computing resource that is used for deploying and managing models. It can be a local computer, a Linux VM on Azure, or a Kubernetes cluster running in Azure Container Service. A model hosted in a Docker container runs in these environments and is exposed as a REST API endpoint.
+ - An **Environment** denotes a particular computing resource that is used for deploying and managing models. It can be a local computer, a Linux VM on Azure, or a Kubernetes cluster running in Azure Container Service (ACS). A model hosted in a Docker container runs in these environments and is exposed as a REST API endpoint.
 
 After this lab is finished, we will have a better idea of how to use AML in order to:
 
@@ -40,12 +40,12 @@ After this lab is finished, we will have a better idea of how to use AML in orde
 
 In order to operationalize a model, we need (at a minimum) a code file that runs the scoring protocol. Typically, we also use an estimated model (from an experiment run) and a schema file that indicates the structure of the POST command that the service will expect. 
 
-Below, we will gather all of these requirments. We will create a template project that already includes a code file called `score.py` that implements a scoring protocol. We will complete an experiment run and download the estimated model, and we will generate the schema file.
+Below, we will gather all of these requirements. We will create a template project that already includes a code file called `score.py` that implements a scoring protocol. We will complete an experiment run and download the estimated model, and we will generate the schema file.
 
 
 ### Create a project and review the score.py script
 
-Open AML and press **CTRL+N** to create a new project. Name the project `churn_prediction` and use the `Documents` folder as the project directory. Finally, in the box called `Search Project Templates`, type `churn` and select the template called `Customer Churn Prediction`. Press **Create** to create the project.
+Open AML workbench and press **CTRL+N** to create a new project. Name the project `churn_prediction` and use the `Documents` folder as the project directory. Finally, in the box called `Search Project Templates`, type `churn` and select the template called `Customer Churn Prediction`. Press **Create** to create the project.
 
 Once the project is created and open, look in the `Files` section for a file called `score.py`. Examine this file, and note what dependencies it has (both in terms of the modules and files it loads).
 
